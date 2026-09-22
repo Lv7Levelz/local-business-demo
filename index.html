@@ -3,123 +3,725 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Smith Plumbing Sheffield - Local Plumber</title>
+
+    <meta name="description" content="Smith Plumbing Sheffield provides reliable plumbing services across Sheffield. Call today for a free quote.">
+
+    <title>Smith Plumbing Sheffield | Reliable Local Plumbers</title>
 
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #172033;
+            background: #ffffff;
             line-height: 1.6;
         }
 
-        .hero {
-            background: #1f4f8f;
-            color: white;
-            text-align: center;
-            padding: 80px 20px;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 15px;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-        }
-
-        .btn {
-            display: inline-block;
-            background: white;
-            color: #1f4f8f;
-            padding: 12px 24px;
+        a {
             text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
         }
 
-        section {
-            padding: 50px 20px;
-            max-width: 1000px;
+        .container {
+            width: 90%;
+            max-width: 1100px;
             margin: auto;
         }
 
-        h2 {
-            margin-bottom: 20px;
-            color: #1f4f8f;
+        /* NAVIGATION */
+
+        nav {
+            background: white;
+            padding: 18px 0;
+            border-bottom: 1px solid #eeeeee;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
-        .services {
-            display: grid;
-            grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #123b70;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: #172033;
+            font-weight: 600;
+        }
+
+        .nav-button {
+            background: #f4a62a;
+            color: #111111 !important;
+            padding: 10px 18px;
+            border-radius: 6px;
+        }
+
+        /* HERO */
+
+        .hero {
+            background: linear-gradient(rgba(12, 39, 72, 0.92), rgba(12, 39, 72, 0.92)),
+                        url("https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&w=1600&q=80");
+
+            background-size: cover;
+            background-position: center;
+
+            color: white;
+            padding: 110px 0;
+        }
+
+        .hero-content {
+            max-width: 700px;
+        }
+
+        .hero h1 {
+            font-size: 54px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            color: #eeeeee;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 25px;
+            border-radius: 6px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .primary-button {
+            background: #f4a62a;
+            color: #111111;
+        }
+
+        .secondary-button {
+            border: 2px solid white;
+            color: white;
+        }
+
+        /* TRUST BAR */
+
+        .trust {
+            background: #f5f7fa;
+            padding: 25px 0;
+        }
+
+        .trust-inner {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
             gap: 20px;
         }
 
-        .card {
-            background: #f4f4f4;
-            padding: 20px;
-            border-radius: 8px;
+        .trust-item {
+            font-weight: bold;
         }
 
-        footer {
-            background: #222;
+        /* SECTIONS */
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            color: #123b70;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #666666;
+        }
+
+        /* SERVICES */
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .service {
+            padding: 30px;
+            border: 1px solid #e5e5e5;
+            border-radius: 10px;
+            background: white;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+        }
+
+        .service-icon {
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .service h3 {
+            margin-bottom: 10px;
+            color: #123b70;
+        }
+
+        .service p {
+            color: #666666;
+        }
+
+        /* ABOUT */
+
+        .about {
+            background: #f5f7fa;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .about-text h2 {
+            font-size: 36px;
+            color: #123b70;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            color: #555555;
+        }
+
+        .check-list {
+            list-style: none;
+        }
+
+        .check-list li {
+            margin-bottom: 12px;
+            font-weight: bold;
+        }
+
+        /* REVIEWS */
+
+        .reviews {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .review {
+            background: #f5f7fa;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .stars {
+            color: #f4a62a;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .review p {
+            margin-bottom: 15px;
+        }
+
+        .review strong {
+            color: #123b70;
+        }
+
+        /* CTA */
+
+        .cta {
+            background: #123b70;
             color: white;
             text-align: center;
-            padding: 25px;
+        }
+
+        .cta h2 {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            margin-bottom: 25px;
+            color: #eeeeee;
+        }
+
+        /* CONTACT */
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info h2 {
+            color: #123b70;
+            font-size: 34px;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            margin-bottom: 15px;
+        }
+
+        .contact-box {
+            background: #f5f7fa;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .contact-box h3 {
+            color: #123b70;
+            margin-bottom: 15px;
+        }
+
+        .contact-box a {
+            display: inline-block;
+            margin-top: 10px;
+            background: #f4a62a;
+            color: #111111;
+            padding: 14px 22px;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #101827;
+            color: white;
+            padding: 35px 0;
+            text-align: center;
+        }
+
+        footer p {
+            color: #bbbbbb;
+            margin-top: 8px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 80px 0;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .services,
+            .reviews,
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .trust-inner {
+                flex-direction: column;
+            }
+
+            section {
+                padding: 60px 0;
+            }
         }
     </style>
 </head>
+
 <body>
 
-    <div class="hero">
-        <h1>Smith Plumbing Sheffield</h1>
-        <p>Reliable Local Plumbing Services</p>
-        <a href="#contact" class="btn">Get a Free Quote</a>
+    <!-- NAVIGATION -->
+
+    <nav>
+        <div class="container nav-inner">
+
+            <div class="logo">
+                Smith Plumbing
+            </div>
+
+            <div class="nav-links">
+                <a href="#services">Services</a>
+                <a href="#about">About</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#contact">Contact</a>
+                <a class="nav-button" href="tel:01141234567">
+                    Call Now
+                </a>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <!-- HERO -->
+
+    <header class="hero">
+
+        <div class="container">
+
+            <div class="hero-content">
+
+                <h1>
+                    Reliable Plumbing Services Across Sheffield
+                </h1>
+
+                <p>
+                    Professional plumbing services for homes and businesses.
+                    Fast response, honest pricing and quality workmanship.
+                </p>
+
+                <a class="button primary-button" href="tel:01141234567">
+                    📞 Call 0114 123 4567
+                </a>
+
+                <a class="button secondary-button" href="#contact">
+                    Get a Free Quote
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- TRUST -->
+
+    <div class="trust">
+
+        <div class="container trust-inner">
+
+            <div class="trust-item">
+                ✓ Local Sheffield Service
+            </div>
+
+            <div class="trust-item">
+                ✓ Fast Response
+            </div>
+
+            <div class="trust-item">
+                ✓ Free Quotes
+            </div>
+
+            <div class="trust-item">
+                ✓ Domestic & Commercial
+            </div>
+
+        </div>
+
     </div>
 
-    <section>
-        <h2>About Us</h2>
-        <p>
-            We provide professional plumbing services throughout Sheffield.
-            Fast response times, competitive pricing and excellent customer service.
-        </p>
-    </section>
 
-    <section>
-        <h2>Services</h2>
+    <!-- SERVICES -->
 
-        <div class="services">
-            <div class="card">
-                <h3>Emergency Plumbing</h3>
-                <p>24/7 emergency callouts.</p>
+    <section id="services">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Our Plumbing Services</h2>
+
+                <p>
+                    Professional help when you need it.
+                </p>
+
             </div>
 
-            <div class="card">
-                <h3>Bathroom Installation</h3>
-                <p>Complete bathroom fitting service.</p>
+
+            <div class="services">
+
+                <div class="service">
+
+                    <div class="service-icon">🔧</div>
+
+                    <h3>Emergency Plumbing</h3>
+
+                    <p>
+                        Fast assistance with urgent leaks, blocked pipes
+                        and plumbing problems.
+                    </p>
+
+                </div>
+
+
+                <div class="service">
+
+                    <div class="service-icon">🚿</div>
+
+                    <h3>Bathroom Plumbing</h3>
+
+                    <p>
+                        Repairs, replacements and plumbing installation
+                        for bathrooms of all sizes.
+                    </p>
+
+                </div>
+
+
+                <div class="service">
+
+                    <div class="service-icon">💧</div>
+
+                    <h3>Leak Repairs</h3>
+
+                    <p>
+                        We can help locate and repair leaks before
+                        they cause further damage.
+                    </p>
+
+                </div>
+
             </div>
 
-            <div class="card">
-                <h3>Leak Repairs</h3>
-                <p>Fast and reliable leak detection and repairs.</p>
-            </div>
         </div>
+
     </section>
+
+
+    <!-- ABOUT -->
+
+    <section id="about" class="about">
+
+        <div class="container about-grid">
+
+            <div class="about-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?auto=format&fit=crop&w=900&q=80"
+                    alt="Professional plumber working"
+                >
+
+            </div>
+
+
+            <div class="about-text">
+
+                <h2>Your Local Sheffield Plumber</h2>
+
+                <p>
+                    Smith Plumbing provides dependable plumbing services
+                    throughout Sheffield and surrounding areas.
+                </p>
+
+                <p>
+                    Whether you have an emergency, need a repair or are
+                    planning a new installation, we're here to help.
+                </p>
+
+                <ul class="check-list">
+
+                    <li>✓ Friendly local service</li>
+                    <li>✓ Clear pricing</li>
+                    <li>✓ Quality workmanship</li>
+                    <li>✓ Domestic and commercial work</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- REVIEWS -->
+
+    <section id="reviews">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>What Our Customers Say</h2>
+
+                <p>
+                    Example testimonials for this demo website.
+                </p>
+
+            </div>
+
+
+            <div class="reviews">
+
+                <div class="review">
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                    <p>
+                        "Really helpful and professional service.
+                        The problem was sorted quickly."
+                    </p>
+
+                    <strong>— Example Customer</strong>
+
+                </div>
+
+
+                <div class="review">
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                    <p>
+                        "Friendly service and very clear about the work
+                        that needed doing."
+                    </p>
+
+                    <strong>— Example Customer</strong>
+
+                </div>
+
+
+                <div class="review">
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                    <p>
+                        "Great communication and a quick response.
+                        Would use them again."
+                    </p>
+
+                    <strong>— Example Customer</strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CTA -->
+
+    <section class="cta">
+
+        <div class="container">
+
+            <h2>Need a Plumber?</h2>
+
+            <p>
+                Contact Smith Plumbing today for a free quote.
+            </p>
+
+            <a class="button primary-button" href="tel:01141234567">
+                Call 0114 123 4567
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
 
     <section id="contact">
-        <h2>Contact</h2>
-        <p>Phone: 0114 123 4567</p>
-        <p>Email: info@example.com</p>
+
+        <div class="container contact-grid">
+
+            <div class="contact-info">
+
+                <h2>Get In Touch</h2>
+
+                <p>
+                    Need help with a plumbing problem?
+                    Give us a call and we'll be happy to help.
+                </p>
+
+                <p>
+                    📍 Sheffield & surrounding areas
+                </p>
+
+                <p>
+                    📞 0114 123 4567
+                </p>
+
+                <p>
+                    ✉️ info@example.com
+                </p>
+
+            </div>
+
+
+            <div class="contact-box">
+
+                <h3>Request a Quote</h3>
+
+                <p>
+                    Call us today to discuss your plumbing requirements
+                    and arrange a free quote.
+                </p>
+
+                <a href="tel:01141234567">
+                    Call Now
+                </a>
+
+            </div>
+
+        </div>
+
     </section>
 
+
+    <!-- FOOTER -->
+
     <footer>
-        © 2026 Smith Plumbing Sheffield
+
+        <div class="container">
+
+            <strong>Smith Plumbing Sheffield</strong>
+
+            <p>
+                Professional plumbing services across Sheffield.
+            </p>
+
+            <p>
+                © 2026 Smith Plumbing. Demo website.
+            </p>
+
+        </div>
+
     </footer>
 
 </body>
