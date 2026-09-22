@@ -5,643 +5,323 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Roofing FAQs | Sheffield Roofing & Repairs</title>
-
-  <meta name="description" content="Frequently asked questions about roof repairs, emergency roofing, flat roofs, guttering and roofline services in Sheffield.">
+  <meta name="description" content="Answers to common questions about roof repairs, emergency roofing, flat roofs and guttering in Sheffield.">
 
   <style>
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
     }
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      color: #17202a;
-      line-height: 1.7;
-      background: #ffffff;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .topbar {
-      background: #111827;
-      color: #ffffff;
-      padding: 10px 6%;
-      font-size: 14px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .topbar a {
-      color: #ffffff;
-      font-weight: bold;
+      line-height: 1.6;
+      color: #222;
+      background: #f7f7f7;
     }
 
     header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: #ffffff;
-      border-bottom: 1px solid #e5e7eb;
+      background: #111827;
+      color: white;
       padding: 18px 6%;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 30px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     .logo {
       font-size: 21px;
-      font-weight: 800;
-      color: #111827;
-      line-height: 1.2;
-    }
-
-    .logo span {
-      display: block;
-      font-size: 12px;
-      color: #64748b;
-      font-weight: 500;
-      margin-top: 3px;
+      font-weight: bold;
+      white-space: nowrap;
     }
 
     nav {
       display: flex;
-      gap: 24px;
-      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
     }
 
     nav a {
+      color: white;
+      text-decoration: none;
       font-size: 14px;
-      font-weight: 600;
-      color: #374151;
     }
 
     nav a:hover {
-      color: #dc2626;
-    }
-
-    .nav-button {
-      background: #dc2626;
-      color: #ffffff !important;
-      padding: 11px 18px;
-      border-radius: 7px;
+      color: #f59e0b;
     }
 
     .hero {
+      min-height: 430px;
+      display: flex;
+      align-items: center;
+      padding: 80px 6%;
+      color: white;
       background:
-        linear-gradient(rgba(15, 23, 42, 0.86), rgba(15, 23, 42, 0.86)),
-        url("https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=1800&q=85")
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+        url("https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=1800&q=80")
         center/cover;
-      color: #ffffff;
-      padding: 100px 6%;
     }
 
     .hero-content {
       max-width: 850px;
-      margin: auto;
-      text-align: center;
-    }
-
-    .hero-label {
-      color: #fca5a5;
-      font-size: 14px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      margin-bottom: 15px;
     }
 
     .hero h1 {
-      font-size: 52px;
-      line-height: 1.1;
-      margin-bottom: 22px;
+      font-size: clamp(42px, 6vw, 70px);
+      line-height: 1.05;
+      margin-bottom: 25px;
     }
 
     .hero p {
-      max-width: 700px;
-      margin: auto;
+      font-size: 20px;
+      max-width: 650px;
       color: #e5e7eb;
-      font-size: 18px;
     }
 
     .section {
-      padding: 85px 6%;
+      padding: 80px 6%;
     }
 
-    .section-light {
-      background: #f8fafc;
-    }
-
-    .container {
+    .section-inner {
       max-width: 950px;
       margin: auto;
     }
 
-    .section-heading {
-      text-align: center;
-      margin-bottom: 45px;
-    }
-
-    .eyebrow {
-      color: #dc2626;
-      text-transform: uppercase;
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: 1.5px;
-      margin-bottom: 10px;
-    }
-
-    h2 {
+    .section h2 {
       font-size: 38px;
-      line-height: 1.2;
+      margin-bottom: 15px;
       color: #111827;
-      margin-bottom: 18px;
     }
 
-    .section-heading p {
-      color: #64748b;
-      font-size: 17px;
+    .intro {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 40px;
       max-width: 700px;
-      margin: auto;
     }
 
     .faq-list {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
+      display: grid;
+      gap: 18px;
     }
 
-    .faq-item {
-      background: #ffffff;
-      border: 1px solid #e5e7eb;
-      border-radius: 10px;
-      padding: 25px 28px;
-    }
-
-    .faq-item h3 {
-      color: #111827;
-      font-size: 19px;
-      margin-bottom: 10px;
-    }
-
-    .faq-item p {
-      color: #64748b;
-      font-size: 15px;
-    }
-
-    .emergency-box {
-      background: #fff7ed;
-      border: 1px solid #fed7aa;
+    .faq {
+      background: white;
       border-radius: 12px;
-      padding: 30px;
-      margin-top: 35px;
+      padding: 28px 30px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+      border: 1px solid #e5e7eb;
     }
 
-    .emergency-box h3 {
-      color: #9a3412;
+    .faq h3 {
       font-size: 21px;
-      margin-bottom: 10px;
+      color: #111827;
+      margin-bottom: 12px;
     }
 
-    .emergency-box p {
-      color: #7c2d12;
-      font-size: 15px;
+    .faq p {
+      color: #555;
+      font-size: 16px;
     }
 
     .cta {
       background: #111827;
-      color: #ffffff;
-      padding: 75px 6%;
+      color: white;
+      padding: 70px 6%;
       text-align: center;
     }
 
     .cta h2 {
-      color: #ffffff;
       font-size: 38px;
       margin-bottom: 15px;
     }
 
     .cta p {
-      color: #cbd5e1;
+      color: #d1d5db;
       max-width: 650px;
       margin: 0 auto 30px;
-    }
-
-    .cta-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 14px;
-      flex-wrap: wrap;
+      font-size: 18px;
     }
 
     .button {
       display: inline-block;
-      padding: 14px 23px;
+      background: #f59e0b;
+      color: #111827;
+      text-decoration: none;
+      padding: 15px 25px;
       border-radius: 7px;
-      font-weight: 700;
+      font-weight: bold;
     }
 
-    .button-primary {
-      background: #dc2626;
-      color: #ffffff;
-    }
-
-    .button-secondary {
-      border: 1px solid #64748b;
-      color: #ffffff;
+    .button:hover {
+      background: #fbbf24;
     }
 
     footer {
       background: #0b1120;
-      color: #94a3b8;
-      padding: 45px 6% 25px;
-    }
-
-    .footer-grid {
-      max-width: 1100px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr;
-      gap: 50px;
-    }
-
-    footer h3 {
-      color: #ffffff;
-      margin-bottom: 15px;
-    }
-
-    footer p {
+      color: #9ca3af;
+      padding: 30px 6%;
+      text-align: center;
       font-size: 14px;
-      margin-bottom: 8px;
     }
 
-    footer a:hover {
-      color: #ffffff;
-    }
-
-    .copyright {
-      max-width: 1100px;
-      margin: 35px auto 0;
-      padding-top: 20px;
-      border-top: 1px solid #1e293b;
-      font-size: 13px;
-    }
-
-    @media (max-width: 850px) {
-
-      .topbar {
-        padding: 9px 5%;
-        font-size: 12px;
-      }
-
+    @media (max-width: 800px) {
       header {
-        padding: 16px 5%;
+        flex-direction: column;
+        align-items: flex-start;
       }
 
       nav {
-        display: none;
+        gap: 12px;
       }
 
       .hero {
-        padding: 75px 5%;
-      }
-
-      .hero h1 {
-        font-size: 40px;
+        min-height: 380px;
       }
 
       .section {
-        padding: 65px 5%;
+        padding: 60px 6%;
       }
-
-      h2 {
-        font-size: 31px;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-      }
-
     }
   </style>
 </head>
 
 <body>
 
-  <div class="topbar">
-    <div>Serving Sheffield & surrounding areas</div>
-
-    <div>
-      <a href="tel:01141234567">0114 123 4567</a>
-    </div>
-  </div>
-
-  <header>
-
-    <a href="index.html" class="logo">
-      Sheffield Roofing & Repairs
-      <span>Roofing Specialists</span>
-    </a>
-
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="roof-repairs.html">Roof Repairs</a>
-      <a href="emergency-roof-repairs.html">Emergency</a>
-      <a href="flat-roof-repairs.html">Flat Roofs</a>
-      <a href="guttering.html">Guttering</a>
-      <a href="about.html">About</a>
-      <a href="index.html#contact" class="nav-button">Contact Us</a>
-    </nav>
-
-  </header>
-
-  <section class="hero">
-
-    <div class="hero-content">
-
-      <div class="hero-label">Frequently Asked Questions</div>
-
-      <h1>Roofing Questions Answered</h1>
-
-      <p>
-        Find answers to some of the common questions customers ask about
-        roofing repairs and maintenance.
-      </p>
-
-    </div>
-
-  </section>
-
-  <section class="section">
-
-    <div class="container">
-
-      <div class="section-heading">
-
-        <div class="eyebrow">FAQs</div>
-
-        <h2>Common roofing questions</h2>
-
-        <p>
-          If you can't find the answer you're looking for, get in touch and
-          we'll be happy to discuss your requirements.
-        </p>
-
-      </div>
-
-      <div class="faq-list">
-
-        <div class="faq-item">
-
-          <h3>How do I know if my roof needs repairing?</h3>
-
-          <p>
-            Signs can include missing or damaged tiles, visible leaks, damp
-            patches, damaged flashing, blocked gutters or water entering the
-            property. Some problems may not be obvious from ground level, so
-            professional inspection can help identify potential issues.
-          </p>
-
-        </div>
-
-        <div class="faq-item">
-
-          <h3>Can you help with a leaking roof?</h3>
-
-          <p>
-            Yes. If your roof is leaking, the source of the problem should be
-            identified as soon as practical. Depending on the cause, repairs
-            may involve tiles, flashing, roof coverings, guttering or other
-            areas of the roof.
-          </p>
-
-        </div>
-
-        <div class="faq-item">
-
-          <h3>Do you repair flat roofs?</h3>
-
-          <p>
-            Yes. Flat roof repairs can include addressing leaks, damaged
-            coverings, failed joints and other issues affecting the roof.
-            The appropriate repair will depend on the type and condition of
-            the roof.
-          </p>
-
-        </div>
-
-        <div class="faq-item">
-
-          <h3>Can you repair damaged guttering?</h3>
-
-          <p>
-            Yes. Guttering can suffer from blockages, leaks, damaged sections,
-            loose fittings and poor drainage. These issues can allow water to
-            reach areas of the building where it can cause further problems.
-          </p>
-
-        </div>
-
-        <div class="faq-item">
-
-          <h3>What are fascias and soffits?</h3>
-
-          <p>
-            Fascias and soffits form part of a property's roofline. They help
-            protect the edge of the roof and provide a finished appearance
-            around the roofline. Damaged or deteriorating sections may need
-            repair or replacement.
-          </p>
-
-        </div>
-
-        <div class="faq-item">
-
-          <h3>Do you deal with emergency roofing problems?</h3>
-
-          <p>
-            We can discuss urgent roofing problems such as unexpected leaks,
-            storm-related damage or damaged roof coverings and advise on the
-            next appropriate step.
-          </p>
-
-        </div>
-
-        <div class="faq-item">
-
-          <h3>Which areas do you cover?</h3>
-
-          <p>
-            We cover Sheffield and surrounding areas, including areas such as
-            Hillsborough, Ecclesall, Crookes, Dore, Meadowhead, Walkley,
-            Broomhill, Sharrow and Handsworth. We also work in nearby areas,
-            so contact us if you're unsure whether your location is covered.
-          </p>
-
-        </div>
-
-        <div class="faq-item">
-
-          <h3>How can I arrange a roofing job?</h3>
-
-          <p>
-            The easiest way is to get in touch by phone or email and explain
-            what is happening with your roof. Providing photographs can also
-            be useful when discussing a visible problem.
-          </p>
-
-        </div>
-
-      </div>
-
-      <div class="emergency-box">
-
-        <h3>Have you got an urgent roofing problem?</h3>
-
-        <p>
-          If water is entering your property or your roof has suffered
-          unexpected damage, contact us as soon as practical to discuss the
-          situation.
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <section class="section section-light">
-
-    <div class="container">
-
-      <div class="section-heading">
-
-        <div class="eyebrow">Need More Information?</div>
-
-        <h2>Let's discuss your roof</h2>
-
-        <p>
-          Every roofing problem is different. Get in touch to explain what is
-          happening and discuss the next steps.
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <section class="cta">
-
-    <h2>Need help with your roof?</h2>
-
+<header>
+  <div class="logo">Sheffield Roofing & Repairs</div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="roof-repairs.html">Roof Repairs</a>
+    <a href="emergency-roof-repairs.html">Emergency</a>
+    <a href="flat-roof-repairs.html">Flat Roofs</a>
+    <a href="guttering.html">Guttering</a>
+    <a href="about.html">About</a>
+    <a href="faq.html">FAQs</a>
+    <a href="contact.html">Get a Quote</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Roofing FAQs.</h1>
     <p>
-      Contact Sheffield Roofing & Repairs to discuss your roofing
-      requirements.
+      Straightforward answers to some of the most common questions
+      about roof repairs and maintenance.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-inner">
+
+    <h2>Frequently Asked Questions</h2>
+
+    <p class="intro">
+      If you are unsure about a roofing problem, these answers can help
+      you understand what may be involved before arranging an inspection.
     </p>
 
-    <div class="cta-buttons">
+    <div class="faq-list">
 
-      <a href="tel:01141234567" class="button button-primary">
-        Call 0114 123 4567
-      </a>
-
-      <a href="index.html#contact" class="button button-secondary">
-        Get In Touch
-      </a>
-
-    </div>
-
-  </section>
-
-  <footer>
-
-    <div class="footer-grid">
-
-      <div>
-
-        <h3>Sheffield Roofing & Repairs</h3>
-
+      <div class="faq">
+        <h3>How do I know if my roof needs repairing?</h3>
         <p>
-          Roofing repairs, maintenance, guttering and roofline services
-          across Sheffield and surrounding areas.
+          Common signs include missing or damaged tiles, water coming into
+          the property, damp patches, damaged flashing, blocked gutters or
+          visible areas of wear. If you are unsure, it is worth having the
+          roof inspected before a small issue becomes a larger repair.
         </p>
-
       </div>
 
-      <div>
-
-        <h3>Services</h3>
-
+      <div class="faq">
+        <h3>Can you repair a roof rather than replace it?</h3>
         <p>
-          <a href="roof-repairs.html">Roof Repairs</a>
+          In many cases, yes. The appropriate solution depends on the
+          condition of the roof and the extent of the damage. A repair may
+          be suitable where the problem is limited to a particular area.
         </p>
-
-        <p>
-          <a href="emergency-roof-repairs.html">Emergency Repairs</a>
-        </p>
-
-        <p>
-          <a href="flat-roof-repairs.html">Flat Roof Repairs</a>
-        </p>
-
-        <p>
-          <a href="guttering.html">Guttering</a>
-        </p>
-
-        <p>
-          <a href="roofline.html">Roofline & Fascias</a>
-        </p>
-
       </div>
 
-      <div>
-
-        <h3>Contact</h3>
-
+      <div class="faq">
+        <h3>Do you deal with emergency roof leaks?</h3>
         <p>
-          <a href="tel:01141234567">0114 123 4567</a>
+          Yes. If your roof has suddenly developed a leak or suffered
+          weather-related damage, contact us to discuss the problem and
+          arrange the appropriate response.
         </p>
+      </div>
 
+      <div class="faq">
+        <h3>How quickly can a roof repair be carried out?</h3>
         <p>
-          <a href="mailto:info@example.com">info@example.com</a>
+          Timescales depend on the type of repair, the extent of the damage
+          and availability. Once the problem has been assessed, you can
+          discuss the work and expected timescale before proceeding.
         </p>
+      </div>
 
+      <div class="faq">
+        <h3>Do you repair flat roofs?</h3>
         <p>
-          <a href="about.html">About Us</a>
+          Yes. Flat roof problems can include damaged coverings, leaks,
+          worn edges and issues around joints or drainage. The right repair
+          depends on the condition of the existing roof.
         </p>
+      </div>
 
+      <div class="faq">
+        <h3>Can blocked gutters cause roof problems?</h3>
         <p>
-          <a href="areas.html">Areas We Cover</a>
+          They can contribute to water overflowing and potentially cause
+          problems around the roofline and walls. Keeping gutters clear
+          helps water drain away properly.
         </p>
+      </div>
 
+      <div class="faq">
+        <h3>Do you provide roofing quotes?</h3>
         <p>
-          <a href="faq.html">FAQs</a>
+          Yes. Contact us with details of the problem and we can discuss
+          the next steps and the work that may be required.
         </p>
+      </div>
 
+      <div class="faq">
+        <h3>What areas do you cover?</h3>
         <p>
-          <a href="index.html#contact">Contact</a>
+          We provide roofing services in Sheffield and surrounding areas.
+          Contact us with your location to discuss whether we can help.
         </p>
-
       </div>
 
     </div>
 
-    <div class="copyright">
-      © 2026 Sheffield Roofing & Repairs. All rights reserved.
-    </div>
+  </div>
+</section>
 
-  </footer>
+<section class="cta">
+  <h2>Still have a question?</h2>
+
+  <p>
+    If you cannot find the answer you are looking for, get in touch
+    and tell us what is happening with your roof.
+  </p>
+
+  <a href="contact.html" class="button">Get a Quote</a>
+</section>
+
+<footer>
+  © 2026 Sheffield Roofing & Repairs. All rights reserved.
+</footer>
 
 </body>
 </html>
