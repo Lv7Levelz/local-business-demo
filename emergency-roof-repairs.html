@@ -1,419 +1,232 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Emergency Roof Repairs Sheffield | Sheffield Roofing & Repairs</title>
 
-  <meta name="description" content="Emergency roof repair enquiries in Sheffield for leaks, storm damage, damaged tiles and urgent roofing problems. Contact Sheffield Roofing & Repairs.">
+  <meta name="description" content="Emergency roof repairs in Sheffield for leaks, storm damage, broken tiles and urgent roofing problems.">
 
   <style>
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
     }
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      color: #172033;
+      color: #17202a;
       line-height: 1.6;
       background: #fff;
     }
 
     a {
       text-decoration: none;
+      color: inherit;
     }
 
-    .container {
-      width: 92%;
-      max-width: 1150px;
-      margin: auto;
-    }
-
-    .top-bar {
-      background: #0b1a2a;
+    .topbar {
+      background: #111827;
       color: white;
+      text-align: center;
+      padding: 9px;
       font-size: 14px;
-    }
-
-    .top-bar-inner {
-      min-height: 42px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .top-bar a {
-      color: white;
-      font-weight: bold;
     }
 
     header {
       background: white;
-      border-bottom: 1px solid #e5e8ed;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+      border-bottom: 1px solid #e5e7eb;
     }
 
     .nav {
-      min-height: 78px;
+      max-width: 1180px;
+      margin: auto;
+      padding: 18px 25px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
+      gap: 25px;
     }
 
     .logo {
-      color: #123b70;
-      font-size: 21px;
-      font-weight: 900;
-      line-height: 1.1;
+      font-size: 22px;
+      font-weight: 800;
+      white-space: nowrap;
     }
 
     .logo span {
-      display: block;
-      color: #f4a62a;
-      font-size: 10px;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      margin-top: 5px;
+      color: #d97706;
     }
 
-    .nav-links {
+    nav {
       display: flex;
+      gap: 20px;
       align-items: center;
-      gap: 24px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
     }
 
-    .nav-links a {
-      color: #172033;
+    nav a {
+      font-size: 14px;
       font-weight: 700;
     }
 
-    .nav-call {
-      background: #f4a62a;
-      padding: 12px 19px;
-      border-radius: 6px;
-      color: #111 !important;
+    nav a:hover {
+      color: #d97706;
+    }
+
+    .quote {
+      background: #d97706;
+      color: white !important;
+      padding: 11px 17px;
+      border-radius: 7px;
     }
 
     .hero {
-      padding: 110px 0;
       background:
-        linear-gradient(
-          rgba(7, 25, 43, 0.92),
-          rgba(18, 59, 112, 0.92)
-        ),
-        url("https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=2000&q=85");
-
-      background-size: cover;
-      background-position: center;
+        linear-gradient(rgba(15,23,42,.82), rgba(15,23,42,.82)),
+        url("https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
       color: white;
+      padding: 110px 25px;
     }
 
-    .hero-content {
-      max-width: 800px;
+    .hero-inner {
+      max-width: 1180px;
+      margin: auto;
     }
 
-    .label {
-      display: inline-block;
-      background: #f4a62a;
-      color: #111;
-      padding: 8px 14px;
-      border-radius: 4px;
-      font-size: 13px;
-      font-weight: 900;
-      margin-bottom: 20px;
+    .hero small {
+      color: #fbbf24;
+      font-weight: 800;
+      letter-spacing: 1px;
     }
 
     h1 {
       font-size: clamp(42px, 6vw, 68px);
       line-height: 1.05;
-      margin-bottom: 25px;
+      max-width: 850px;
+      margin: 15px 0 25px;
     }
 
     .hero p {
-      font-size: 20px;
-      color: #e9eef4;
-      max-width: 700px;
-      margin-bottom: 30px;
-    }
-
-    .buttons {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
-
-    .button {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      padding: 15px 24px;
-      border-radius: 6px;
-      font-weight: 800;
-    }
-
-    .primary {
-      background: #f4a62a;
-      color: #111;
-    }
-
-    .secondary {
-      border: 2px solid white;
-      color: white;
+      max-width: 720px;
+      font-size: 19px;
+      color: #e5e7eb;
     }
 
     section {
-      padding: 85px 0;
+      padding: 80px 25px;
     }
 
-    .heading {
-      max-width: 750px;
-      margin-bottom: 45px;
+    .container {
+      max-width: 1000px;
+      margin: auto;
     }
 
-    .heading h2 {
-      color: #123b70;
-      font-size: 40px;
-      line-height: 1.15;
-      margin-bottom: 15px;
+    h2 {
+      font-size: 38px;
+      margin-bottom: 20px;
     }
 
-    .heading p {
-      color: #626d7c;
+    p {
+      color: #6b7280;
       font-size: 17px;
+      margin-bottom: 20px;
     }
 
-    .two-column {
+    .content {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 55px;
-      align-items: center;
+      grid-template-columns: 2fr 1fr;
+      gap: 50px;
     }
 
-    .image {
-      min-height: 430px;
+    .card {
+      background: #fff7ed;
+      padding: 30px;
       border-radius: 12px;
-      background:
-        linear-gradient(
-          rgba(18,59,112,.15),
-          rgba(11,26,42,.60)
-        ),
-        url("https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=1200&q=85");
-
-      background-size: cover;
-      background-position: center;
+      border: 1px solid #fed7aa;
     }
 
-    .text p {
-      color: #626d7c;
-      margin-bottom: 18px;
+    .card h3 {
+      margin-bottom: 15px;
+      font-size: 22px;
     }
 
-    .checks {
+    ul {
       list-style: none;
-      margin-top: 25px;
+      margin: 25px 0;
     }
 
-    .checks li {
-      margin: 12px 0;
-      font-weight: 750;
+    li {
+      margin-bottom: 14px;
+      font-weight: 600;
     }
 
-    .checks li::before {
+    li::before {
       content: "✓";
-      color: #f4a62a;
+      color: #d97706;
       font-weight: 900;
       margin-right: 10px;
     }
 
-    .warning {
-      background: #fff7e8;
-      border-left: 5px solid #f4a62a;
-      padding: 25px;
-      margin-top: 25px;
-    }
-
-    .warning h3 {
-      color: #123b70;
-      margin-bottom: 8px;
-    }
-
-    .warning p {
-      color: #626d7c;
-    }
-
-    .grey {
-      background: #f5f7fa;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-    }
-
-    .card {
-      background: white;
-      border: 1px solid #e1e6ec;
-      border-radius: 10px;
-      padding: 30px;
-    }
-
-    .card h3 {
-      color: #123b70;
-      margin-bottom: 10px;
-      font-size: 21px;
-    }
-
-    .card p {
-      color: #626d7c;
-    }
-
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-    }
-
-    .step {
-      border: 1px solid #e1e6ec;
-      border-radius: 10px;
-      padding: 30px;
-    }
-
-    .number {
-      width: 45px;
-      height: 45px;
-      background: #123b70;
+    .button {
+      display: inline-block;
+      background: #d97706;
       color: white;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-weight: 900;
-      margin-bottom: 18px;
+      padding: 14px 21px;
+      border-radius: 7px;
+      font-weight: 800;
+      margin-top: 10px;
     }
 
-    .step h3 {
-      color: #123b70;
-      margin-bottom: 8px;
-    }
-
-    .step p {
-      color: #626d7c;
+    .button:hover {
+      background: #b45309;
     }
 
     .cta {
-      background: #123b70;
+      background: #111827;
       color: white;
       text-align: center;
     }
 
     .cta h2 {
-      font-size: 42px;
-      margin-bottom: 12px;
+      color: white;
     }
 
     .cta p {
-      color: #e7edf4;
-      font-size: 18px;
-      margin-bottom: 28px;
+      color: #cbd5e1;
     }
 
     footer {
-      background: #0b1a2a;
+      background: #0b1120;
+      color: #cbd5e1;
+      padding: 40px 25px;
+      text-align: center;
+    }
+
+    footer p {
+      color: #cbd5e1;
+    }
+
+    footer a {
       color: white;
-      padding: 50px 0 25px;
+      font-weight: 700;
     }
 
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr;
-      gap: 45px;
-    }
-
-    footer h3 {
-      margin-bottom: 15px;
-    }
-
-    footer p,
-    footer a {
-      color: #b8c3cf;
-    }
-
-    footer a {
-      display: block;
-      margin-bottom: 8px;
-    }
-
-    .copyright {
-      border-top: 1px solid #283849;
-      margin-top: 35px;
-      padding-top: 20px;
-      color: #8996a4;
-      font-size: 14px;
-    }
-
-    @media (max-width: 850px) {
-
-      .nav-links a:not(.nav-call) {
-        display: none;
+    @media (max-width: 800px) {
+      .nav {
+        flex-direction: column;
       }
 
-      .two-column {
-        grid-template-columns: 1fr;
-      }
-
-      .cards,
-      .steps {
-        grid-template-columns: 1fr;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero {
-        padding: 80px 0;
-      }
-    }
-
-    @media (max-width: 500px) {
-
-      .top-bar-inner {
+      nav {
         justify-content: center;
       }
 
-      .top-bar-inner span {
-        display: none;
-      }
-
-      h1 {
-        font-size: 40px;
-      }
-
-      .hero p {
-        font-size: 17px;
-      }
-
-      .button {
-        width: 100%;
-      }
-
-      section {
-        padding: 60px 0;
-      }
-
-      .image {
-        min-height: 320px;
+      .content {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -421,250 +234,103 @@
 
 <body>
 
-  <div class="top-bar">
-    <div class="container top-bar-inner">
-      <span>Serving Sheffield & surrounding areas</span>
-      <a href="tel:01141234567">Call 0114 123 4567</a>
-    </div>
+  <div class="topbar">
+    Local roofing services across Sheffield & surrounding areas
   </div>
 
   <header>
-    <div class="container nav">
+
+    <div class="nav">
 
       <a href="index.html" class="logo">
-        Sheffield Roofing & Repairs
-        <span>Roofing Specialists</span>
+        Sheffield <span>Roofing</span> & Repairs
       </a>
 
-      <nav class="nav-links">
+      <nav>
         <a href="index.html">Home</a>
         <a href="roof-repairs.html">Roof Repairs</a>
-        <a href="index.html#services">Services</a>
-        <a href="index.html#about">About</a>
-        <a href="index.html#contact">Contact</a>
-        <a href="tel:01141234567" class="nav-call">Call Now</a>
+        <a href="emergency-roof-repairs.html">Emergency</a>
+        <a href="flat-roof-repairs.html">Flat Roofs</a>
+        <a href="guttering.html">Guttering</a>
+        <a href="about.html">About</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html" class="quote">Get a Quote</a>
       </nav>
 
     </div>
+
   </header>
+
 
   <section class="hero">
 
-    <div class="container">
+    <div class="hero-inner">
 
-      <div class="hero-content">
+      <small>EMERGENCY ROOF REPAIRS IN SHEFFIELD</small>
 
-        <div class="label">
-          EMERGENCY ROOFING IN SHEFFIELD
-        </div>
+      <h1>Urgent roofing problems need attention.</h1>
 
-        <h1>
-          Emergency Roof Repair Enquiries
-        </h1>
-
-        <p>
-          Dealing with a leak, storm damage or damaged roofing?
-          Contact Sheffield Roofing & Repairs to discuss your
-          urgent roofing requirements.
-        </p>
-
-        <div class="buttons">
-
-          <a href="tel:01141234567" class="button primary">
-            📞 Call 0114 123 4567
-          </a>
-
-          <a href="index.html#contact" class="button secondary">
-            Contact Us
-          </a>
-
-        </div>
-
-      </div>
+      <p>
+        Help with unexpected roof leaks, storm damage, broken tiles
+        and other urgent roofing problems across Sheffield.
+      </p>
 
     </div>
 
   </section>
 
-  <section>
-
-    <div class="container two-column">
-
-      <div class="image"></div>
-
-      <div class="text">
-
-        <div class="label">
-          URGENT ROOFING PROBLEMS
-        </div>
-
-        <h2 style="color:#123b70;font-size:40px;line-height:1.15;margin-bottom:20px;">
-          When Your Roof Needs Attention
-        </h2>
-
-        <p>
-          Roofing problems can happen unexpectedly, particularly
-          following periods of strong wind or heavy rain.
-        </p>
-
-        <p>
-          A leak or damaged roof should be dealt with promptly
-          where possible to help prevent further problems.
-        </p>
-
-        <ul class="checks">
-          <li>Roof leaks</li>
-          <li>Storm-related damage</li>
-          <li>Missing or damaged tiles</li>
-          <li>Damaged roofline components</li>
-          <li>Urgent roofing enquiries</li>
-        </ul>
-
-        <div class="warning">
-
-          <h3>Roofing Emergency?</h3>
-
-          <p>
-            If your property has suffered sudden roofing damage,
-            contact us as soon as practical to discuss the issue.
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <section class="grey">
-
-    <div class="container">
-
-      <div class="heading">
-
-        <h2>
-          Common Emergency Roofing Problems
-        </h2>
-
-        <p>
-          These are some of the situations where property owners
-          may need urgent roofing assistance.
-        </p>
-
-      </div>
-
-      <div class="cards">
-
-        <div class="card">
-          <h3>Roof Leaks</h3>
-          <p>
-            Water entering your property can indicate a problem
-            with the roof or surrounding components.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Storm Damage</h3>
-          <p>
-            Strong winds can cause tiles and other roofing
-            components to become damaged or displaced.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Missing Tiles</h3>
-          <p>
-            Missing tiles can expose areas of the roof to
-            weather and should be assessed.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Fascia Damage</h3>
-          <p>
-            Roofline components can sometimes become damaged
-            following severe weather.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Water Damage</h3>
-          <p>
-            Signs of water entering a property should be
-            investigated to identify the source.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Loose Roofing Materials</h3>
-          <p>
-            Damaged or loose roofing materials may require
-            attention to reduce the risk of further damage.
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
 
   <section>
 
     <div class="container">
 
-      <div class="heading">
+      <div class="content">
 
-        <h2>
-          What To Do If Your Roof Is Damaged
-        </h2>
+        <div>
 
-        <p>
-          Taking sensible steps can help protect your property
-          while you arrange professional assistance.
-        </p>
-
-      </div>
-
-      <div class="steps">
-
-        <div class="step">
-
-          <div class="number">1</div>
-
-          <h3>Stay Safe</h3>
+          <h2>Emergency Roofing Services</h2>
 
           <p>
-            Avoid climbing onto a damaged roof yourself,
-            particularly during poor weather.
+            Roofing problems can happen unexpectedly. Strong weather,
+            damaged tiles or sudden leaks can leave your property
+            vulnerable to further damage.
           </p>
+
+          <p>
+            If you have an urgent roofing issue, contact us to explain
+            what has happened and discuss the appropriate next steps.
+          </p>
+
+          <h2>Common Emergencies</h2>
+
+          <ul>
+            <li>Sudden roof leaks</li>
+            <li>Storm damage</li>
+            <li>Broken or missing tiles</li>
+            <li>Water entering the property</li>
+            <li>Damaged roofline</li>
+            <li>Loose roofing materials</li>
+          </ul>
+
+          <a href="contact.html" class="button">
+            Request Help
+          </a>
 
         </div>
 
-        <div class="step">
 
-          <div class="number">2</div>
+        <div class="card">
 
-          <h3>Limit Further Damage</h3>
-
-          <p>
-            Where it is safe to do so, take reasonable steps
-            to protect the affected area inside your property.
-          </p>
-
-        </div>
-
-        <div class="step">
-
-          <div class="number">3</div>
-
-          <h3>Get In Touch</h3>
+          <h3>Roofing emergency?</h3>
 
           <p>
-            Contact Sheffield Roofing & Repairs to discuss
-            the roofing problem and the appropriate next step.
+            Contact us and explain the problem. We can discuss what
+            needs to happen next.
           </p>
+
+          <a href="tel:01141234567" class="button">
+            Call 0114 123 4567
+          </a>
 
         </div>
 
@@ -673,81 +339,42 @@
     </div>
 
   </section>
+
 
   <section class="cta">
 
     <div class="container">
 
-      <h2>Have A Roofing Emergency?</h2>
+      <h2>Need urgent roofing help?</h2>
 
       <p>
-        Call us to discuss your roofing problem.
+        Get in touch to discuss your roofing problem.
       </p>
 
-      <a href="tel:01141234567" class="button primary">
-        📞 Call 0114 123 4567
+      <a href="contact.html" class="button">
+        Contact Us
       </a>
 
     </div>
 
   </section>
 
+
   <footer>
 
-    <div class="container">
+    <p>
+      Sheffield Roofing & Repairs
+    </p>
 
-      <div class="footer-grid">
+    <p>
+      <a href="index.html">Home</a> ·
+      <a href="emergency-roof-repairs.html">Emergency Roofing</a> ·
+      <a href="contact.html">Contact</a>
+    </p>
 
-        <div>
-
-          <h3>Sheffield Roofing & Repairs</h3>
-
-          <p>
-            Professional roofing services for homes and
-            businesses across Sheffield and surrounding areas.
-          </p>
-
-        </div>
-
-        <div>
-
-          <h3>Services</h3>
-
-          <a href="roof-repairs.html">Roof Repairs</a>
-          <a href="emergency-roof-repairs.html">
-            Emergency Roof Repairs
-          </a>
-          <a href="index.html#services">Flat Roofs</a>
-          <a href="index.html#services">Guttering</a>
-
-        </div>
-
-        <div>
-
-          <h3>Contact</h3>
-
-          <a href="tel:01141234567">
-            0114 123 4567
-          </a>
-
-          <a href="mailto:info@example.com">
-            info@example.com
-          </a>
-
-          <p>
-            Sheffield, South Yorkshire
-          </p>
-
-        </div>
-
-      </div>
-
-      <div class="copyright">
-        © 2026 Sheffield Roofing & Repairs.
-        All rights reserved.
-      </div>
-
-    </div>
+    <p>
+      © 2026 Sheffield Roofing & Repairs
+    </p>
 
   </footer>
 
