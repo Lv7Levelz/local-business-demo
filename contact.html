@@ -4,26 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Contact | Sheffield Roofing & Repairs</title>
+  <title>Get a Quote | Sheffield Roofing & Repairs</title>
 
-  <meta name="description" content="Contact Sheffield Roofing & Repairs for roof repairs, emergency roofing, flat roofs, guttering and roofline services across Sheffield.">
+  <meta name="description" content="Contact Sheffield Roofing & Repairs to discuss roof repairs, emergency roofing, flat roofs and guttering across Sheffield.">
 
   <style>
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
     }
 
     body {
       font-family: Arial, Helvetica, sans-serif;
       color: #17202a;
-      line-height: 1.7;
-      background: #ffffff;
+      line-height: 1.6;
+      background: #fff;
     }
 
     a {
@@ -33,219 +29,180 @@
 
     .topbar {
       background: #111827;
-      color: #ffffff;
-      padding: 10px 6%;
+      color: white;
+      text-align: center;
+      padding: 9px;
       font-size: 14px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .topbar a {
-      color: #ffffff;
-      font-weight: bold;
     }
 
     header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: #ffffff;
+      background: white;
       border-bottom: 1px solid #e5e7eb;
-      padding: 18px 6%;
+    }
+
+    .nav {
+      max-width: 1180px;
+      margin: auto;
+      padding: 18px 25px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 25px;
     }
 
     .logo {
-      font-size: 21px;
+      font-size: 22px;
       font-weight: 800;
-      color: #111827;
-      line-height: 1.2;
+      white-space: nowrap;
     }
 
     .logo span {
-      display: block;
-      font-size: 12px;
-      color: #64748b;
-      font-weight: 500;
-      margin-top: 3px;
+      color: #d97706;
     }
 
     nav {
       display: flex;
-      gap: 24px;
+      gap: 20px;
       align-items: center;
+      flex-wrap: wrap;
+      justify-content: flex-end;
     }
 
     nav a {
       font-size: 14px;
-      font-weight: 600;
-      color: #374151;
+      font-weight: 700;
     }
 
     nav a:hover {
-      color: #dc2626;
+      color: #d97706;
     }
 
-    .nav-button {
-      background: #dc2626;
-      color: #ffffff !important;
-      padding: 11px 18px;
+    .quote {
+      background: #d97706;
+      color: white !important;
+      padding: 11px 17px;
       border-radius: 7px;
     }
 
     .hero {
       background:
-        linear-gradient(rgba(15, 23, 42, 0.86), rgba(15, 23, 42, 0.86)),
-        url("https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=1800&q=85")
+        linear-gradient(rgba(15,23,42,.82), rgba(15,23,42,.82)),
+        url("https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1800&q=85")
         center/cover;
-      color: #ffffff;
-      padding: 100px 6%;
+      color: white;
+      padding: 110px 25px;
     }
 
-    .hero-content {
-      max-width: 850px;
+    .hero-inner {
+      max-width: 1180px;
       margin: auto;
-      text-align: center;
     }
 
-    .hero-label {
-      color: #fca5a5;
-      font-size: 14px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      margin-bottom: 15px;
+    .hero small {
+      color: #fbbf24;
+      font-weight: 800;
+      letter-spacing: 1px;
     }
 
-    .hero h1 {
-      font-size: 52px;
-      line-height: 1.1;
-      margin-bottom: 22px;
+    h1 {
+      font-size: clamp(42px, 6vw, 68px);
+      line-height: 1.05;
+      max-width: 850px;
+      margin: 15px 0 25px;
     }
 
     .hero p {
-      max-width: 700px;
-      margin: auto;
+      max-width: 720px;
+      font-size: 19px;
       color: #e5e7eb;
-      font-size: 18px;
     }
 
-    .section {
-      padding: 85px 6%;
+    section {
+      padding: 80px 25px;
     }
 
     .container {
-      max-width: 1100px;
+      max-width: 1050px;
       margin: auto;
     }
 
     .contact-grid {
       display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: 60px;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
       align-items: start;
-    }
-
-    .eyebrow {
-      color: #dc2626;
-      text-transform: uppercase;
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: 1.5px;
-      margin-bottom: 10px;
     }
 
     h2 {
       font-size: 38px;
-      line-height: 1.2;
-      color: #111827;
-      margin-bottom: 18px;
+      margin-bottom: 20px;
     }
 
-    .intro {
-      color: #64748b;
+    p {
+      color: #6b7280;
       font-size: 17px;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
     }
 
     .contact-details {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
+      margin-top: 35px;
     }
 
-    .contact-card {
+    .contact-item {
+      background: #f8fafc;
       border: 1px solid #e5e7eb;
-      border-radius: 10px;
-      padding: 22px;
-      background: #ffffff;
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 18px;
     }
 
-    .contact-card strong {
+    .contact-item strong {
       display: block;
-      color: #111827;
-      font-size: 16px;
-      margin-bottom: 4px;
+      font-size: 14px;
+      color: #d97706;
+      margin-bottom: 7px;
+      text-transform: uppercase;
+      letter-spacing: .5px;
     }
 
-    .contact-card a {
-      color: #dc2626;
+    .contact-item a {
+      font-size: 18px;
       font-weight: 700;
     }
 
-    .contact-card p {
-      color: #64748b;
-      font-size: 14px;
-    }
-
-    .contact-form {
+    .form-box {
       background: #f8fafc;
       border: 1px solid #e5e7eb;
-      border-radius: 14px;
+      border-radius: 12px;
       padding: 35px;
     }
 
-    .contact-form h3 {
-      color: #111827;
-      font-size: 24px;
-      margin-bottom: 8px;
+    .form-box h3 {
+      font-size: 25px;
+      margin-bottom: 10px;
     }
 
-    .contact-form > p {
-      color: #64748b;
-      font-size: 14px;
-      margin-bottom: 25px;
+    .form-box p {
+      font-size: 15px;
     }
 
     label {
       display: block;
-      color: #374151;
       font-weight: 700;
       font-size: 14px;
-      margin-bottom: 6px;
+      margin-bottom: 7px;
     }
 
     input,
-    textarea,
-    select {
+    textarea {
       width: 100%;
-      padding: 13px 14px;
+      padding: 13px;
       border: 1px solid #d1d5db;
       border-radius: 7px;
-      background: #ffffff;
       font-family: inherit;
       font-size: 15px;
       margin-bottom: 18px;
-      outline: none;
-    }
-
-    input:focus,
-    textarea:focus,
-    select:focus {
-      border-color: #dc2626;
+      background: white;
     }
 
     textarea {
@@ -253,172 +210,95 @@
       resize: vertical;
     }
 
-    .submit-button {
-      width: 100%;
-      border: none;
-      background: #dc2626;
-      color: #ffffff;
-      padding: 15px;
-      border-radius: 7px;
-      font-size: 16px;
-      font-weight: 700;
-      cursor: pointer;
-    }
-
-    .submit-button:hover {
-      background: #b91c1c;
-    }
-
-    .note {
-      margin-top: 15px;
-      color: #64748b;
-      font-size: 12px;
-    }
-
-    .map-section {
-      background: #f8fafc;
-      padding: 75px 6%;
-    }
-
-    .map-box {
-      max-width: 1100px;
-      margin: auto;
-      background: #e5e7eb;
-      min-height: 350px;
-      border-radius: 14px;
-      overflow: hidden;
-    }
-
-    .map-box iframe {
-      width: 100%;
-      height: 350px;
-      border: 0;
-    }
-
-    .cta {
-      background: #111827;
-      color: #ffffff;
-      padding: 75px 6%;
-      text-align: center;
-    }
-
-    .cta h2 {
-      color: #ffffff;
-      font-size: 38px;
-      margin-bottom: 15px;
-    }
-
-    .cta p {
-      color: #cbd5e1;
-      max-width: 650px;
-      margin: 0 auto 30px;
-    }
-
-    .cta-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 14px;
-      flex-wrap: wrap;
+    input:focus,
+    textarea:focus {
+      outline: 2px solid #d97706;
+      border-color: #d97706;
     }
 
     .button {
       display: inline-block;
-      padding: 14px 23px;
+      background: #111827;
+      color: white;
+      padding: 14px 21px;
       border-radius: 7px;
-      font-weight: 700;
+      font-weight: 800;
+      margin-top: 10px;
+      border: 0;
+      cursor: pointer;
+      font-size: 15px;
     }
 
-    .button-primary {
-      background: #dc2626;
-      color: #ffffff;
+    .button:hover {
+      background: #000;
     }
 
-    .button-secondary {
-      border: 1px solid #64748b;
-      color: #ffffff;
+    .dark {
+      background: #111827;
+      color: white;
+    }
+
+    .dark h2 {
+      color: white;
+    }
+
+    .dark p {
+      color: #cbd5e1;
+    }
+
+    .dark-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .points {
+      list-style: none;
+    }
+
+    .points li {
+      margin-bottom: 15px;
+      color: #e5e7eb;
+      font-weight: 600;
+    }
+
+    .points li::before {
+      content: "✓";
+      color: #f59e0b;
+      font-weight: 900;
+      margin-right: 10px;
     }
 
     footer {
       background: #0b1120;
-      color: #94a3b8;
-      padding: 45px 6% 25px;
-    }
-
-    .footer-grid {
-      max-width: 1100px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr;
-      gap: 50px;
-    }
-
-    footer h3 {
-      color: #ffffff;
-      margin-bottom: 15px;
+      color: #cbd5e1;
+      padding: 40px 25px;
+      text-align: center;
     }
 
     footer p {
-      font-size: 14px;
-      margin-bottom: 8px;
+      color: #cbd5e1;
     }
 
-    footer a:hover {
-      color: #ffffff;
+    footer a {
+      color: white;
+      font-weight: 700;
     }
 
-    .copyright {
-      max-width: 1100px;
-      margin: 35px auto 0;
-      padding-top: 20px;
-      border-top: 1px solid #1e293b;
-      font-size: 13px;
-    }
-
-    @media (max-width: 850px) {
-
-      .topbar {
-        padding: 9px 5%;
-        font-size: 12px;
-      }
-
-      header {
-        padding: 16px 5%;
+    @media (max-width: 800px) {
+      .nav {
+        flex-direction: column;
       }
 
       nav {
-        display: none;
+        justify-content: center;
       }
 
-      .hero {
-        padding: 75px 5%;
-      }
-
-      .hero h1 {
-        font-size: 40px;
-      }
-
-      .section {
-        padding: 65px 5%;
-      }
-
-      h2 {
-        font-size: 31px;
-      }
-
-      .contact-grid {
+      .contact-grid,
+      .dark-grid {
         grid-template-columns: 1fr;
-        gap: 40px;
       }
-
-      .contact-form {
-        padding: 25px;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-      }
-
     }
   </style>
 </head>
@@ -426,78 +306,52 @@
 <body>
 
   <div class="topbar">
-
-    <div>
-      Serving Sheffield & surrounding areas
-    </div>
-
-    <div>
-      <a href="tel:01141234567">0114 123 4567</a>
-    </div>
-
+    Local roofing services across Sheffield & surrounding areas
   </div>
 
   <header>
 
-    <a href="index.html" class="logo">
-      Sheffield Roofing & Repairs
-      <span>Roofing Specialists</span>
-    </a>
+    <div class="nav">
 
-    <nav>
-
-      <a href="index.html">Home</a>
-
-      <a href="roof-repairs.html">
-        Roof Repairs
+      <a href="index.html" class="logo">
+        Sheffield <span>Roofing</span> & Repairs
       </a>
 
-      <a href="emergency-roof-repairs.html">
-        Emergency
-      </a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="roof-repairs.html">Roof Repairs</a>
+        <a href="emergency-roof-repairs.html">Emergency</a>
+        <a href="flat-roof-repairs.html">Flat Roofs</a>
+        <a href="guttering.html">Guttering</a>
+        <a href="about.html">About</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html" class="quote">Get a Quote</a>
+      </nav>
 
-      <a href="flat-roof-repairs.html">
-        Flat Roofs
-      </a>
-
-      <a href="guttering.html">
-        Guttering
-      </a>
-
-      <a href="about.html">
-        About
-      </a>
-
-      <a href="index.html#contact" class="nav-button">
-        Contact Us
-      </a>
-
-    </nav>
+    </div>
 
   </header>
 
+
   <section class="hero">
 
-    <div class="hero-content">
+    <div class="hero-inner">
 
-      <div class="hero-label">
-        Get In Touch
-      </div>
+      <small>GET IN TOUCH</small>
 
-      <h1>
-        Contact Sheffield Roofing & Repairs
-      </h1>
+      <h1>Let's talk about your roof.</h1>
 
       <p>
-        Have a roofing problem or need some work discussing?
-        Get in touch and tell us what you need.
+        Tell us what is happening with your roof and we'll discuss
+        the next steps with you.
       </p>
 
     </div>
 
   </section>
 
-  <section class="section">
+
+  <section>
 
     <div class="container">
 
@@ -505,86 +359,49 @@
 
         <div>
 
-          <div class="eyebrow">
-            Contact Us
-          </div>
+          <h2>Get a Quote</h2>
 
-          <h2>
-            Let's discuss your roofing requirements
-          </h2>
+          <p>
+            Whether you've spotted a leak, need a repair or have
+            another roofing problem, get in touch with some details
+            about what you need.
+          </p>
 
-          <p class="intro">
-            Whether you've noticed a leak, damaged tiles, blocked guttering
-            or another roofing problem, contact us to discuss what is
-            happening with your property.
+          <p>
+            Providing a few details about the problem can help us
+            understand what you're looking for before discussing
+            the next steps.
           </p>
 
           <div class="contact-details">
 
-            <div class="contact-card">
-
-              <strong>
-                Phone
-              </strong>
-
-              <p>
-                Call us directly:
-              </p>
-
-              <a href="tel:01141234567">
-                0114 123 4567
-              </a>
-
+            <div class="contact-item">
+              <strong>Phone</strong>
+              <a href="tel:01141234567">0114 123 4567</a>
             </div>
 
-            <div class="contact-card">
-
-              <strong>
-                Email
-              </strong>
-
-              <p>
-                Send us an enquiry:
-              </p>
-
-              <a href="mailto:info@example.com">
-                info@example.com
-              </a>
-
-            </div>
-
-            <div class="contact-card">
-
-              <strong>
-                Areas Covered
-              </strong>
-
-              <p>
-                Sheffield and surrounding areas.
-              </p>
-
+            <div class="contact-item">
+              <strong>Email</strong>
+              <a href="mailto:info@example.com">info@example.com</a>
             </div>
 
           </div>
 
         </div>
 
-        <div class="contact-form">
 
-          <h3>
-            Send an enquiry
-          </h3>
+        <div class="form-box">
+
+          <h3>Tell us about your roofing problem</h3>
 
           <p>
-            Complete the form below to prepare an email enquiry.
+            Complete the form below and your email app will open
+            with the details ready to send.
           </p>
 
           <form action="mailto:info@example.com" method="post" enctype="text/plain">
 
-            <label for="name">
-              Your Name
-            </label>
-
+            <label for="name">Name</label>
             <input
               type="text"
               id="name"
@@ -593,10 +410,7 @@
               required
             >
 
-            <label for="phone">
-              Phone Number
-            </label>
-
+            <label for="phone">Phone</label>
             <input
               type="tel"
               id="phone"
@@ -604,10 +418,7 @@
               placeholder="Your phone number"
             >
 
-            <label for="email">
-              Email Address
-            </label>
-
+            <label for="email">Email</label>
             <input
               type="email"
               id="email"
@@ -616,67 +427,19 @@
               required
             >
 
-            <label for="service">
-              What do you need help with?
-            </label>
-
-            <select id="service" name="Service">
-
-              <option value="">
-                Select a service
-              </option>
-
-              <option value="Roof Repair">
-                Roof Repair
-              </option>
-
-              <option value="Emergency Roof Repair">
-                Emergency Roof Repair
-              </option>
-
-              <option value="Flat Roof">
-                Flat Roof
-              </option>
-
-              <option value="Guttering">
-                Guttering
-              </option>
-
-              <option value="Roofline">
-                Roofline / Fascias
-              </option>
-
-              <option value="Other">
-                Other
-              </option>
-
-            </select>
-
-            <label for="message">
-              Tell us about the problem
-            </label>
-
+            <label for="message">How can we help?</label>
             <textarea
               id="message"
               name="Message"
-              placeholder="Describe the roofing problem..."
+              placeholder="Tell us about the roofing problem..."
               required
             ></textarea>
 
-            <button
-              type="submit"
-              class="submit-button"
-            >
+            <button type="submit" class="button">
               Send Enquiry
             </button>
 
           </form>
-
-          <p class="note">
-            This demo form opens your email application when submitted.
-            We can upgrade this later if the business needs a proper online
-            enquiry system.
-          </p>
 
         </div>
 
@@ -686,143 +449,60 @@
 
   </section>
 
-  <section class="map-section">
 
-    <div class="map-box">
+  <section class="dark">
 
-      <iframe
-        src="https://www.google.com/maps?q=Sheffield%2C%20UK&output=embed"
-        loading="lazy"
-        allowfullscreen
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
+    <div class="container">
 
-    </div>
+      <div class="dark-grid">
 
-  </section>
+        <div>
 
-  <section class="cta">
+          <h2>Roofing services across Sheffield.</h2>
 
-    <h2>
-      Need a roofer?
-    </h2>
+          <p>
+            Get in touch about the roofing service you need.
+            We can discuss your requirements and the appropriate
+            next steps.
+          </p>
 
-    <p>
-      Call us today to discuss your roofing requirements.
-    </p>
+        </div>
 
-    <div class="cta-buttons">
+        <div>
 
-      <a
-        href="tel:01141234567"
-        class="button button-primary"
-      >
-        Call 0114 123 4567
-      </a>
+          <ul class="points">
+            <li>Roof repairs</li>
+            <li>Emergency roof repairs</li>
+            <li>Flat roof repairs</li>
+            <li>Guttering services</li>
+            <li>Roofline services</li>
+            <li>General roofing maintenance</li>
+          </ul>
 
-      <a
-        href="mailto:info@example.com"
-        class="button button-secondary"
-      >
-        Email Us
-      </a>
+        </div>
+
+      </div>
 
     </div>
 
   </section>
+
 
   <footer>
 
-    <div class="footer-grid">
+    <p>
+      Sheffield Roofing & Repairs
+    </p>
 
-      <div>
+    <p>
+      <a href="index.html">Home</a> ·
+      <a href="about.html">About</a> ·
+      <a href="contact.html">Contact</a>
+    </p>
 
-        <h3>
-          Sheffield Roofing & Repairs
-        </h3>
-
-        <p>
-          Roofing repairs, maintenance, guttering and roofline services
-          across Sheffield and surrounding areas.
-        </p>
-
-      </div>
-
-      <div>
-
-        <h3>
-          Services
-        </h3>
-
-        <p>
-          <a href="roof-repairs.html">
-            Roof Repairs
-          </a>
-        </p>
-
-        <p>
-          <a href="emergency-roof-repairs.html">
-            Emergency Repairs
-          </a>
-        </p>
-
-        <p>
-          <a href="flat-roof-repairs.html">
-            Flat Roof Repairs
-          </a>
-        </p>
-
-        <p>
-          <a href="guttering.html">
-            Guttering
-          </a>
-        </p>
-
-        <p>
-          <a href="roofline.html">
-            Roofline & Fascias
-          </a>
-        </p>
-
-      </div>
-
-      <div>
-
-        <h3>
-          Quick Links
-        </h3>
-
-        <p>
-          <a href="about.html">
-            About Us
-          </a>
-        </p>
-
-        <p>
-          <a href="areas.html">
-            Areas We Cover
-          </a>
-        </p>
-
-        <p>
-          <a href="faq.html">
-            FAQs
-          </a>
-        </p>
-
-        <p>
-          <a href="contact.html">
-            Contact
-          </a>
-        </p>
-
-      </div>
-
-    </div>
-
-    <div class="copyright">
-      © 2026 Sheffield Roofing & Repairs. All rights reserved.
-    </div>
+    <p>
+      © 2026 Sheffield Roofing & Repairs
+    </p>
 
   </footer>
 
