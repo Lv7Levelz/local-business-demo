@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Roofing FAQs | Sheffield Roofing & Repairs</title>
-  <meta name="description" content="Answers to common questions about roof repairs, emergency roofing, flat roofs and guttering in Sheffield.">
+  <title>FAQs | Sheffield Roofing & Repairs</title>
+  <meta name="description" content="Frequently asked questions about roof repairs, emergency roofing, flat roofs and guttering in Sheffield.">
 
   <style>
     * {
@@ -16,46 +16,61 @@
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6;
       color: #222;
-      background: #f7f7f7;
+      background: #fff;
+      line-height: 1.6;
     }
+
+    /* HEADER */
 
     header {
       background: #111827;
       color: white;
-      padding: 18px 6%;
+      padding: 20px 6%;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       gap: 30px;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
     }
 
     .logo {
       font-size: 21px;
-      font-weight: bold;
+      font-weight: 700;
       white-space: nowrap;
     }
 
     nav {
       display: flex;
-      gap: 20px;
+      align-items: center;
+      gap: 22px;
       flex-wrap: wrap;
-      justify-content: flex-end;
     }
 
     nav a {
-      color: white;
+      color: #fff;
       text-decoration: none;
       font-size: 14px;
+      font-weight: 500;
     }
 
     nav a:hover {
       color: #f59e0b;
     }
+
+    .nav-quote {
+      background: #f59e0b;
+      color: #111827 !important;
+      padding: 11px 17px;
+      border-radius: 6px;
+      font-weight: 700 !important;
+    }
+
+    .nav-quote:hover {
+      background: #fbbf24;
+      color: #111827 !important;
+    }
+
+    /* HERO */
 
     .hero {
       min-height: 430px;
@@ -63,10 +78,14 @@
       align-items: center;
       padding: 80px 6%;
       color: white;
+
       background:
-        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+        linear-gradient(
+          rgba(0,0,0,0.58),
+          rgba(0,0,0,0.58)
+        ),
         url("https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=1800&q=80")
-        center/cover;
+        center / cover;
     }
 
     .hero-content {
@@ -74,37 +93,40 @@
     }
 
     .hero h1 {
-      font-size: clamp(42px, 6vw, 70px);
+      font-size: clamp(44px, 6vw, 72px);
       line-height: 1.05;
-      margin-bottom: 25px;
+      margin-bottom: 24px;
     }
 
     .hero p {
-      font-size: 20px;
       max-width: 650px;
+      font-size: 20px;
       color: #e5e7eb;
     }
 
+    /* FAQ SECTION */
+
     .section {
-      padding: 80px 6%;
+      padding: 85px 6%;
     }
 
     .section-inner {
-      max-width: 950px;
+      max-width: 1000px;
       margin: auto;
     }
 
     .section h2 {
-      font-size: 38px;
-      margin-bottom: 15px;
+      font-size: 40px;
+      line-height: 1.2;
+      margin-bottom: 16px;
       color: #111827;
     }
 
     .intro {
+      max-width: 720px;
       font-size: 18px;
-      color: #555;
-      margin-bottom: 40px;
-      max-width: 700px;
+      color: #666;
+      margin-bottom: 45px;
     }
 
     .faq-list {
@@ -113,17 +135,15 @@
     }
 
     .faq {
-      background: white;
-      border-radius: 12px;
-      padding: 28px 30px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.06);
-      border: 1px solid #e5e7eb;
+      background: #f8f8f8;
+      border-left: 4px solid #f59e0b;
+      padding: 25px 28px;
     }
 
     .faq h3 {
-      font-size: 21px;
+      font-size: 20px;
       color: #111827;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
     .faq p {
@@ -131,22 +151,24 @@
       font-size: 16px;
     }
 
+    /* CTA */
+
     .cta {
       background: #111827;
       color: white;
-      padding: 70px 6%;
+      padding: 80px 6%;
       text-align: center;
     }
 
     .cta h2 {
-      font-size: 38px;
+      font-size: 40px;
       margin-bottom: 15px;
     }
 
     .cta p {
-      color: #d1d5db;
       max-width: 650px;
       margin: 0 auto 30px;
+      color: #d1d5db;
       font-size: 18px;
     }
 
@@ -154,15 +176,17 @@
       display: inline-block;
       background: #f59e0b;
       color: #111827;
+      padding: 14px 24px;
+      border-radius: 6px;
       text-decoration: none;
-      padding: 15px 25px;
-      border-radius: 7px;
-      font-weight: bold;
+      font-weight: 700;
     }
 
     .button:hover {
       background: #fbbf24;
     }
+
+    /* FOOTER */
 
     footer {
       background: #0b1120;
@@ -172,23 +196,53 @@
       font-size: 14px;
     }
 
-    @media (max-width: 800px) {
+    /* MOBILE */
+
+    @media (max-width: 900px) {
+
       header {
         flex-direction: column;
         align-items: flex-start;
       }
 
       nav {
-        gap: 12px;
+        gap: 14px;
       }
 
+    }
+
+    @media (max-width: 600px) {
+
       .hero {
-        min-height: 380px;
+        min-height: 360px;
+        padding: 65px 6%;
+      }
+
+      .hero h1 {
+        font-size: 46px;
+      }
+
+      .hero p {
+        font-size: 17px;
       }
 
       .section {
-        padding: 60px 6%;
+        padding: 65px 6%;
       }
+
+      .section h2,
+      .cta h2 {
+        font-size: 32px;
+      }
+
+      nav {
+        gap: 12px;
+      }
+
+      nav a {
+        font-size: 13px;
+      }
+
     }
   </style>
 </head>
@@ -196,7 +250,10 @@
 <body>
 
 <header>
-  <div class="logo">Sheffield Roofing & Repairs</div>
+
+  <div class="logo">
+    Sheffield Roofing & Repairs
+  </div>
 
   <nav>
     <a href="index.html">Home</a>
@@ -206,94 +263,110 @@
     <a href="guttering.html">Guttering</a>
     <a href="about.html">About</a>
     <a href="faq.html">FAQs</a>
-    <a href="contact.html">Get a Quote</a>
+    <a href="contact.html" class="nav-quote">Get a Quote</a>
   </nav>
+
 </header>
 
+
 <section class="hero">
+
   <div class="hero-content">
-    <h1>Roofing FAQs.</h1>
+
+    <h1>Frequently asked questions.</h1>
+
     <p>
-      Straightforward answers to some of the most common questions
-      about roof repairs and maintenance.
+      Straightforward answers to common questions about
+      roof repairs and roofing services in Sheffield.
     </p>
+
   </div>
+
 </section>
 
+
 <section class="section">
+
   <div class="section-inner">
 
-    <h2>Frequently Asked Questions</h2>
+    <h2>Roofing FAQs</h2>
 
     <p class="intro">
-      If you are unsure about a roofing problem, these answers can help
-      you understand what may be involved before arranging an inspection.
+      Not sure what your roof needs? Here are answers to some of
+      the questions we commonly receive.
     </p>
+
 
     <div class="faq-list">
 
       <div class="faq">
         <h3>How do I know if my roof needs repairing?</h3>
         <p>
-          Common signs include missing or damaged tiles, water coming into
-          the property, damp patches, damaged flashing, blocked gutters or
-          visible areas of wear. If you are unsure, it is worth having the
-          roof inspected before a small issue becomes a larger repair.
+          Signs can include missing or damaged tiles, leaks, damp patches,
+          damaged flashing and visible wear. If you are unsure about a
+          problem, having it assessed can help prevent further damage.
         </p>
       </div>
 
+
       <div class="faq">
-        <h3>Can you repair a roof rather than replace it?</h3>
+        <h3>Can a damaged roof be repaired rather than replaced?</h3>
         <p>
-          In many cases, yes. The appropriate solution depends on the
-          condition of the roof and the extent of the damage. A repair may
-          be suitable where the problem is limited to a particular area.
+          In many cases, yes. The right approach depends on the condition
+          of the roof and the extent of the damage. Smaller problems can
+          often be dealt with without replacing the entire roof.
         </p>
       </div>
+
 
       <div class="faq">
         <h3>Do you deal with emergency roof leaks?</h3>
         <p>
-          Yes. If your roof has suddenly developed a leak or suffered
-          weather-related damage, contact us to discuss the problem and
-          arrange the appropriate response.
+          Yes. If you have an unexpected leak or weather-related roof
+          damage, get in touch and explain what has happened so the
+          appropriate next steps can be discussed.
         </p>
       </div>
 
-      <div class="faq">
-        <h3>How quickly can a roof repair be carried out?</h3>
-        <p>
-          Timescales depend on the type of repair, the extent of the damage
-          and availability. Once the problem has been assessed, you can
-          discuss the work and expected timescale before proceeding.
-        </p>
-      </div>
 
       <div class="faq">
         <h3>Do you repair flat roofs?</h3>
         <p>
-          Yes. Flat roof problems can include damaged coverings, leaks,
-          worn edges and issues around joints or drainage. The right repair
+          Yes. Flat roofs can develop leaks, damaged coverings and
+          problems around joints or drainage. The appropriate repair
           depends on the condition of the existing roof.
         </p>
       </div>
 
+
       <div class="faq">
-        <h3>Can blocked gutters cause roof problems?</h3>
+        <h3>Can you help with guttering problems?</h3>
         <p>
-          They can contribute to water overflowing and potentially cause
-          problems around the roofline and walls. Keeping gutters clear
-          helps water drain away properly.
+          Yes. Blocked, damaged or leaking guttering can cause water to
+          overflow and create problems around the roofline. Guttering
+          issues can be assessed as part of the overall problem.
         </p>
       </div>
 
+
       <div class="faq">
-        <h3>Do you provide roofing quotes?</h3>
+        <h3>How quickly can a repair be carried out?</h3>
         <p>
-          Yes. Contact us with details of the problem and we can discuss
-          the next steps and the work that may be required.
+          This depends on the type and extent of the repair and current
+          availability. Once the problem has been assessed, the required
+          work and expected timescale can be discussed.
         </p>
       </div>
+
+
+      <div class="faq">
+        <h3>Do you provide quotes?</h3>
+        <p>
+          Yes. Contact us with some details about the problem and we can
+          discuss the next steps and the work that may be required.
+        </p>
+      </div>
+
 
       <div class="faq">
         <h3>What areas do you cover?</h3>
@@ -306,22 +379,29 @@
     </div>
 
   </div>
+
 </section>
+
 
 <section class="cta">
-  <h2>Still have a question?</h2>
+
+  <h2>Need help with your roof?</h2>
 
   <p>
-    If you cannot find the answer you are looking for, get in touch
-    and tell us what is happening with your roof.
+    Tell us what is happening and we can discuss the next steps.
   </p>
 
-  <a href="contact.html" class="button">Get a Quote</a>
+  <a href="contact.html" class="button">
+    Get a Quote
+  </a>
+
 </section>
+
 
 <footer>
   © 2026 Sheffield Roofing & Repairs. All rights reserved.
 </footer>
+
 
 </body>
 </html>
