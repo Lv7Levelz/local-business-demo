@@ -6,24 +6,20 @@
 
   <title>About Us | Sheffield Roofing & Repairs</title>
 
-  <meta name="description" content="Learn more about Sheffield Roofing & Repairs and our approach to reliable roof repairs, maintenance, guttering and roofline services across Sheffield.">
+  <meta name="description" content="Learn more about Sheffield Roofing & Repairs and our approach to roofing services across Sheffield.">
 
   <style>
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
     }
 
     body {
       font-family: Arial, Helvetica, sans-serif;
       color: #17202a;
-      line-height: 1.7;
-      background: #ffffff;
+      line-height: 1.6;
+      background: #fff;
     }
 
     a {
@@ -33,355 +29,243 @@
 
     .topbar {
       background: #111827;
-      color: #ffffff;
-      padding: 10px 6%;
+      color: white;
+      text-align: center;
+      padding: 9px;
       font-size: 14px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .topbar a {
-      color: #ffffff;
-      font-weight: bold;
     }
 
     header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: #ffffff;
+      background: white;
       border-bottom: 1px solid #e5e7eb;
-      padding: 18px 6%;
+    }
+
+    .nav {
+      max-width: 1180px;
+      margin: auto;
+      padding: 18px 25px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 25px;
     }
 
     .logo {
-      font-size: 21px;
+      font-size: 22px;
       font-weight: 800;
-      color: #111827;
-      line-height: 1.2;
+      white-space: nowrap;
     }
 
     .logo span {
-      display: block;
-      font-size: 12px;
-      color: #64748b;
-      font-weight: 500;
-      margin-top: 3px;
+      color: #d97706;
     }
 
     nav {
       display: flex;
-      gap: 24px;
+      gap: 20px;
       align-items: center;
+      flex-wrap: wrap;
+      justify-content: flex-end;
     }
 
     nav a {
       font-size: 14px;
-      font-weight: 600;
-      color: #374151;
+      font-weight: 700;
     }
 
     nav a:hover {
-      color: #dc2626;
+      color: #d97706;
     }
 
-    .nav-button {
-      background: #dc2626;
-      color: #ffffff !important;
-      padding: 11px 18px;
+    .quote {
+      background: #d97706;
+      color: white !important;
+      padding: 11px 17px;
       border-radius: 7px;
     }
 
     .hero {
       background:
-        linear-gradient(rgba(15, 23, 42, 0.82), rgba(15, 23, 42, 0.82)),
-        url("https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=1800&q=85")
+        linear-gradient(rgba(15,23,42,.82), rgba(15,23,42,.82)),
+        url("https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1800&q=85")
         center/cover;
-      color: #ffffff;
-      padding: 100px 6%;
+      color: white;
+      padding: 110px 25px;
     }
 
-    .hero-content {
-      max-width: 850px;
+    .hero-inner {
+      max-width: 1180px;
       margin: auto;
-      text-align: center;
     }
 
-    .hero-label {
-      color: #fca5a5;
-      font-size: 14px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      margin-bottom: 15px;
+    .hero small {
+      color: #fbbf24;
+      font-weight: 800;
+      letter-spacing: 1px;
     }
 
-    .hero h1 {
-      font-size: 52px;
-      line-height: 1.1;
-      margin-bottom: 22px;
+    h1 {
+      font-size: clamp(42px, 6vw, 68px);
+      line-height: 1.05;
+      max-width: 850px;
+      margin: 15px 0 25px;
     }
 
     .hero p {
-      max-width: 700px;
-      margin: auto;
+      max-width: 720px;
+      font-size: 19px;
       color: #e5e7eb;
-      font-size: 18px;
     }
 
-    .section {
-      padding: 85px 6%;
-    }
-
-    .section-light {
-      background: #f8fafc;
+    section {
+      padding: 80px 25px;
     }
 
     .container {
-      max-width: 1100px;
+      max-width: 1050px;
       margin: auto;
     }
 
-    .section-heading {
-      max-width: 720px;
-      margin-bottom: 45px;
-    }
-
-    .section-heading.center {
-      text-align: center;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .eyebrow {
-      color: #dc2626;
-      text-transform: uppercase;
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: 1.5px;
-      margin-bottom: 10px;
+    .intro {
+      max-width: 780px;
+      margin-bottom: 50px;
     }
 
     h2 {
       font-size: 38px;
-      line-height: 1.2;
-      color: #111827;
-      margin-bottom: 18px;
-    }
-
-    .section-heading p {
-      color: #64748b;
-      font-size: 17px;
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
-    }
-
-    .about-text p {
       margin-bottom: 20px;
-      color: #475569;
     }
 
-    .about-image {
-      min-height: 430px;
-      border-radius: 14px;
-      background:
-        linear-gradient(rgba(15, 23, 42, 0.15), rgba(15, 23, 42, 0.15)),
-        url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=85")
-        center/cover;
+    p {
+      color: #6b7280;
+      font-size: 17px;
+      margin-bottom: 20px;
     }
 
     .values {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
+      gap: 22px;
+      margin-top: 40px;
     }
 
-    .value-card {
-      background: #ffffff;
+    .value {
+      background: #f8fafc;
       border: 1px solid #e5e7eb;
       border-radius: 12px;
       padding: 30px;
     }
 
     .value-number {
-      width: 42px;
-      height: 42px;
-      background: #fee2e2;
-      color: #dc2626;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 800;
-      margin-bottom: 20px;
+      color: #d97706;
+      font-weight: 900;
+      font-size: 14px;
+      margin-bottom: 15px;
     }
 
-    .value-card h3 {
-      font-size: 20px;
-      margin-bottom: 10px;
-      color: #111827;
+    .value h3 {
+      font-size: 21px;
+      margin-bottom: 12px;
     }
 
-    .value-card p {
-      color: #64748b;
+    .value p {
       font-size: 15px;
+      margin-bottom: 0;
     }
 
-    .services-list {
+    .dark {
+      background: #111827;
+      color: white;
+    }
+
+    .dark h2 {
+      color: white;
+    }
+
+    .dark p {
+      color: #cbd5e1;
+    }
+
+    .dark-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
     }
 
-    .service-item {
-      padding: 22px;
-      border: 1px solid #e5e7eb;
-      border-radius: 10px;
-      background: #ffffff;
+    .points {
+      list-style: none;
     }
 
-    .service-item h3 {
-      margin-bottom: 7px;
-      color: #111827;
-      font-size: 18px;
+    .points li {
+      margin-bottom: 15px;
+      color: #e5e7eb;
+      font-weight: 600;
     }
 
-    .service-item p {
-      color: #64748b;
-      font-size: 15px;
+    .points li::before {
+      content: "✓";
+      color: #f59e0b;
+      font-weight: 900;
+      margin-right: 10px;
     }
 
     .cta {
-      background: #111827;
-      color: #ffffff;
-      padding: 75px 6%;
+      background: #d97706;
+      color: white;
       text-align: center;
     }
 
     .cta h2 {
-      color: #ffffff;
-      font-size: 38px;
-      margin-bottom: 15px;
+      color: white;
     }
 
     .cta p {
-      color: #cbd5e1;
-      max-width: 650px;
-      margin: 0 auto 30px;
-    }
-
-    .cta-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 14px;
-      flex-wrap: wrap;
+      color: #fff7ed;
     }
 
     .button {
       display: inline-block;
-      padding: 14px 23px;
+      background: #111827;
+      color: white;
+      padding: 14px 21px;
       border-radius: 7px;
-      font-weight: 700;
+      font-weight: 800;
+      margin-top: 10px;
     }
 
-    .button-primary {
-      background: #dc2626;
-      color: #ffffff;
-    }
-
-    .button-secondary {
-      border: 1px solid #64748b;
-      color: #ffffff;
+    .button:hover {
+      background: #000;
     }
 
     footer {
       background: #0b1120;
-      color: #94a3b8;
-      padding: 45px 6% 25px;
-    }
-
-    .footer-grid {
-      max-width: 1100px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr;
-      gap: 50px;
-    }
-
-    footer h3 {
-      color: #ffffff;
-      margin-bottom: 15px;
+      color: #cbd5e1;
+      padding: 40px 25px;
+      text-align: center;
     }
 
     footer p {
-      font-size: 14px;
-      margin-bottom: 8px;
+      color: #cbd5e1;
     }
 
-    footer a:hover {
-      color: #ffffff;
+    footer a {
+      color: white;
+      font-weight: 700;
     }
 
-    .copyright {
-      max-width: 1100px;
-      margin: 35px auto 0;
-      padding-top: 20px;
-      border-top: 1px solid #1e293b;
-      font-size: 13px;
-    }
-
-    @media (max-width: 850px) {
-      .topbar {
-        padding: 9px 5%;
-        font-size: 12px;
-      }
-
-      header {
-        padding: 16px 5%;
+    @media (max-width: 800px) {
+      .nav {
+        flex-direction: column;
       }
 
       nav {
-        display: none;
+        justify-content: center;
       }
 
-      .hero {
-        padding: 75px 5%;
-      }
-
-      .hero h1 {
-        font-size: 40px;
-      }
-
-      .section {
-        padding: 65px 5%;
-      }
-
-      h2 {
-        font-size: 31px;
-      }
-
-      .about-grid,
       .values,
-      .services-list,
-      .footer-grid {
+      .dark-grid {
         grid-template-columns: 1fr;
-      }
-
-      .about-image {
-        min-height: 300px;
-      }
-
-      .footer-grid {
-        gap: 30px;
       }
     }
   </style>
@@ -390,268 +274,200 @@
 <body>
 
   <div class="topbar">
-    <div>Serving Sheffield & surrounding areas</div>
-    <div><a href="tel:01141234567">0114 123 4567</a></div>
+    Local roofing services across Sheffield & surrounding areas
   </div>
 
   <header>
-    <a href="index.html" class="logo">
-      Sheffield Roofing & Repairs
-      <span>Roofing Specialists</span>
-    </a>
 
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="roof-repairs.html">Roof Repairs</a>
-      <a href="emergency-roof-repairs.html">Emergency</a>
-      <a href="flat-roof-repairs.html">Flat Roofs</a>
-      <a href="guttering.html">Guttering</a>
-      <a href="about.html">About</a>
-      <a href="index.html#contact" class="nav-button">Contact Us</a>
-    </nav>
+    <div class="nav">
+
+      <a href="index.html" class="logo">
+        Sheffield <span>Roofing</span> & Repairs
+      </a>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="roof-repairs.html">Roof Repairs</a>
+        <a href="emergency-roof-repairs.html">Emergency</a>
+        <a href="flat-roof-repairs.html">Flat Roofs</a>
+        <a href="guttering.html">Guttering</a>
+        <a href="about.html">About</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html" class="quote">Get a Quote</a>
+      </nav>
+
+    </div>
+
   </header>
 
-  <section class="hero">
-    <div class="hero-content">
-      <div class="hero-label">About Sheffield Roofing & Repairs</div>
 
-      <h1>Reliable Roofing Services Across Sheffield</h1>
+  <section class="hero">
+
+    <div class="hero-inner">
+
+      <small>ABOUT SHEFFIELD ROOFING & REPAIRS</small>
+
+      <h1>A straightforward approach to roofing.</h1>
 
       <p>
-        Practical roofing solutions for homeowners and properties across
-        Sheffield, from everyday repairs and maintenance to urgent roofing
-        problems.
+        Helping property owners deal with roofing problems,
+        repairs and maintenance across Sheffield and surrounding areas.
       </p>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-
-      <div class="about-grid">
-
-        <div class="about-text">
-          <div class="eyebrow">About Us</div>
-
-          <h2>A straightforward approach to roofing</h2>
-
-          <p>
-            At Sheffield Roofing & Repairs, the focus is simple: provide
-            dependable roofing services with clear communication and practical
-            solutions.
-          </p>
-
-          <p>
-            Whether a roof has developed a leak, tiles have become damaged,
-            guttering needs attention or a roofline needs repair, the aim is
-            to identify the problem and recommend the appropriate work.
-          </p>
-
-          <p>
-            We work across Sheffield and surrounding areas, helping property
-            owners deal with both smaller roofing issues and larger repair
-            requirements.
-          </p>
-        </div>
-
-        <div class="about-image"></div>
-
-      </div>
 
     </div>
+
   </section>
 
-  <section class="section section-light">
+
+  <section>
+
     <div class="container">
 
-      <div class="section-heading center">
-        <div class="eyebrow">Our Approach</div>
+      <div class="intro">
 
-        <h2>What you can expect</h2>
+        <h2>About Us</h2>
 
         <p>
-          A professional approach from the first conversation through to
-          completion of the work.
+          Roofing problems can be stressful, especially when you're
+          unsure what needs to be done or how serious the issue is.
         </p>
+
+        <p>
+          Our approach is simple: understand the problem, explain the
+          available options and help arrange the appropriate roofing work.
+        </p>
+
+        <p>
+          We provide roofing services for properties across Sheffield
+          and nearby areas, covering everything from general roof repairs
+          to guttering, flat roofs and emergency roofing problems.
+        </p>
+
       </div>
+
 
       <div class="values">
 
-        <div class="value-card">
+        <div class="value">
+
           <div class="value-number">01</div>
 
           <h3>Clear Communication</h3>
 
           <p>
-            We aim to make the process straightforward by discussing the
-            roofing issue clearly and explaining the work that may be required.
+            We aim to make the process straightforward and keep
+            communication clear from the initial enquiry onwards.
           </p>
+
         </div>
 
-        <div class="value-card">
+
+        <div class="value">
+
           <div class="value-number">02</div>
 
           <h3>Practical Solutions</h3>
 
           <p>
-            Every roofing problem is different. The focus is on identifying
-            the issue and finding a sensible solution for the property.
+            Every roofing problem is different, so the right approach
+            depends on the property and the issue involved.
           </p>
+
         </div>
 
-        <div class="value-card">
+
+        <div class="value">
+
           <div class="value-number">03</div>
 
-          <h3>Quality Work</h3>
+          <h3>Local Service</h3>
 
           <p>
-            Roofing repairs should be carried out carefully and with attention
-            to the details that help protect a property from further problems.
+            We focus on roofing requirements across Sheffield and
+            surrounding areas.
           </p>
+
         </div>
 
       </div>
 
     </div>
+
   </section>
 
-  <section class="section">
+
+  <section class="dark">
+
     <div class="container">
 
-      <div class="section-heading">
-        <div class="eyebrow">Our Services</div>
+      <div class="dark-grid">
 
-        <h2>Roofing services for local properties</h2>
+        <div>
 
-        <p>
-          From individual repairs to general maintenance, we provide a range
-          of roofing and exterior property services.
-        </p>
-      </div>
+          <h2>Roofing services for your property.</h2>
 
-      <div class="services-list">
-
-        <div class="service-item">
-          <h3>Roof Repairs</h3>
           <p>
-            Repairs for damaged tiles, leaks, slipped tiles and other common
-            roofing problems.
+            Whether you've discovered a leak, need maintenance or
+            have an urgent roofing problem, we're here to discuss
+            what you need.
           </p>
+
         </div>
 
-        <div class="service-item">
-          <h3>Emergency Roof Repairs</h3>
-          <p>
-            Assistance with urgent roofing problems following damage or
-            unexpected leaks.
-          </p>
-        </div>
+        <div>
 
-        <div class="service-item">
-          <h3>Flat Roof Repairs</h3>
-          <p>
-            Repair and maintenance solutions for flat roofing systems.
-          </p>
-        </div>
+          <ul class="points">
+            <li>Roof repairs</li>
+            <li>Emergency roof repairs</li>
+            <li>Flat roof repairs</li>
+            <li>Guttering services</li>
+            <li>Roofline services</li>
+            <li>General roofing maintenance</li>
+          </ul>
 
-        <div class="service-item">
-          <h3>Guttering</h3>
-          <p>
-            Help with blocked, damaged, leaking or poorly functioning
-            guttering systems.
-          </p>
-        </div>
-
-        <div class="service-item">
-          <h3>Roofline & Fascias</h3>
-          <p>
-            Repairs and maintenance for fascias, soffits and other roofline
-            components.
-          </p>
-        </div>
-
-        <div class="service-item">
-          <h3>Roof Maintenance</h3>
-          <p>
-            General maintenance to help identify roofing issues before they
-            become more serious.
-          </p>
         </div>
 
       </div>
 
     </div>
+
   </section>
+
 
   <section class="cta">
 
-    <h2>Need help with your roof?</h2>
+    <div class="container">
 
-    <p>
-      Get in touch to discuss your roofing requirements and find out what work
-      may be needed.
-    </p>
+      <h2>Need help with your roof?</h2>
 
-    <div class="cta-buttons">
-      <a href="tel:01141234567" class="button button-primary">
-        Call 0114 123 4567
+      <p>
+        Get in touch to discuss your roofing requirements.
+      </p>
+
+      <a href="contact.html" class="button">
+        Contact Us
       </a>
 
-      <a href="index.html#contact" class="button button-secondary">
-        Get In Touch
-      </a>
     </div>
 
   </section>
 
+
   <footer>
 
-    <div class="footer-grid">
+    <p>
+      Sheffield Roofing & Repairs
+    </p>
 
-      <div>
-        <h3>Sheffield Roofing & Repairs</h3>
+    <p>
+      <a href="index.html">Home</a> ·
+      <a href="about.html">About</a> ·
+      <a href="contact.html">Contact</a>
+    </p>
 
-        <p>
-          Roofing repairs, maintenance, guttering and roofline services across
-          Sheffield and surrounding areas.
-        </p>
-      </div>
-
-      <div>
-        <h3>Services</h3>
-
-        <p><a href="roof-repairs.html">Roof Repairs</a></p>
-        <p><a href="emergency-roof-repairs.html">Emergency Repairs</a></p>
-        <p><a href="flat-roof-repairs.html">Flat Roof Repairs</a></p>
-        <p><a href="guttering.html">Guttering</a></p>
-        <p><a href="roofline.html">Roofline & Fascias</a></p>
-      </div>
-
-      <div>
-        <h3>Contact</h3>
-
-        <p>
-          <a href="tel:01141234567">0114 123 4567</a>
-        </p>
-
-        <p>
-          <a href="mailto:info@example.com">info@example.com</a>
-        </p>
-
-        <p>
-          <a href="about.html">About Us</a>
-        </p>
-
-        <p>
-          <a href="index.html#contact">Contact</a>
-        </p>
-      </div>
-
-    </div>
-
-    <div class="copyright">
-      © 2026 Sheffield Roofing & Repairs. All rights reserved.
-    </div>
+    <p>
+      © 2026 Sheffield Roofing & Repairs
+    </p>
 
   </footer>
 
